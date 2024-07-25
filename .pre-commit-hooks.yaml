@@ -1,0 +1,8 @@
+- id: rye-test
+  name: rye-test
+  description: Run 'rye test' on your project.
+  entry: rye-pre-commit
+  language: python
+  types_or: [python, pyi]
+  pass_filenames: false
+  args: ["test"]

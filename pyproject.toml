@@ -1,0 +1,36 @@
+[project]
+name = "rye-pre-commit"
+version = "0.1.0"
+description = "pre-commit.com hooks for `rye`."
+authors = [
+    { name = "itsjohncs", email = "johnsullivan.pem@gmail.com" }
+]
+dependencies = [
+    "rich>=13.7.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+"rye-pre-commit" = "rye_pre_commit:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pre-commit>=3.7.1",
+    "ruff>=0.5.5",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rye_pre_commit"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
