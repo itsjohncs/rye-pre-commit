@@ -24,9 +24,7 @@ def find_rye(verbose: bool) -> Optional[str]:
 
 
 def main(argv: list[str] = sys.argv[1:]) -> int:
-    verbose = "--rye-precommit-verbose" in argv
-    if verbose:
-        argv = [i for i in argv if i != "--rye-precommit-verbose"]
+    verbose = os.environ.get("RYE_PRECOMMIT_VERBOSE", "") != ""
 
     rye_path = find_rye(verbose)
     if not rye_path:
