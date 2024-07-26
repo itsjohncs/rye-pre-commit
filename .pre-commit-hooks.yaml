@@ -14,3 +14,16 @@
   pass_filenames: false
   files: ^(.*/)?(requirements(-dev)?\.lock|pyproject\.toml)$
   args: []
+- id: rye
+  name: rye
+  description: Run 'rye' (pass `args` to customize behavior).
+  entry: rye-pre-commit
+  language: python
+  pass_filenames: false
+  args: []
+- id: rye-with-filenames
+  name: rye-with-filenames
+  description: Run 'rye' (pass `args` to customize behavior). Filenames of changed files will be provided.
+  entry: rye-pre-commit
+  language: python
+  args: []
