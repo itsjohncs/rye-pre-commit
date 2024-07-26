@@ -17,7 +17,7 @@ def find_rye(verbose: bool) -> Optional[str]:
     rye_name = "rye.exe" if platform.system() == "Windows" else "rye"
     for dir in path:
         rye_path = os.path.join(dir, rye_name)
-        if os.path.isfile(rye_path) and os.access(rye_path, os.X_OK):
+        if os.access(rye_path, os.X_OK):
             return rye_path
 
     return None
