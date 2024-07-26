@@ -25,11 +25,3 @@ To run an abitrary `rye` command, you can use the `rye` or `rye-with-filenames` 
   - id: rye-with-filenames
     args: ["run", "black"]
 ```
-
-## Troubleshooting
-
-If `rye-pre-commit` is having trouble finding your system's `rye` executable, you can enable verbose debugging mode by setting the `RYE_PRECOMMIT_VERBOSE` environmental variable. For example:
-
-```bash
-RYE_PRECOMMIT_VERBOSE=1 git commit
-```

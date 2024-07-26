@@ -5,9 +5,7 @@ description = "pre-commit.com hooks for `rye`."
 authors = [
     { name = "itsjohncs", email = "johnsullivan.pem@gmail.com" }
 ]
-dependencies = [
-    "rich>=13.7.1",
-]
+dependencies = []
 readme = "README.md"
 requires-python = ">= 3.8"
 
