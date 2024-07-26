@@ -1,16 +1,16 @@
 - id: rye-test
   name: rye-test
   description: Run 'rye test' on your project.
-  entry: rye-pre-commit
+  entry: rye-pre-commit test
   language: python
   types_or: [python, pyi]
   pass_filenames: false
-  args: ["test"]
+  args: []
 - id: rye-lock
   name: rye-lock
   description: Run 'rye lock' when your project requirements change.
-  entry: rye-pre-commit
+  entry: rye-pre-commit lock
   language: python
   pass_filenames: false
   files: ^(.*/)?(requirements(-dev)?\.lock|pyproject\.toml)$
-  args: ["lock"]
+  args: []
