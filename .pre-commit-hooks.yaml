@@ -1,3 +1,12 @@
+# These could all by `language: system` hooks but because pre-commit applies
+# the PATHEXT variable itself on Windows [^1] and Rye cannot handle being called
+# with casing that doesn't match the filesystem's [^2] Rye would crash. So
+# instead we call a Python script that calls either `rye` or `rye.exe` depending
+# on the platform.
+#
+# [^1] https://github.com/pre-commit/pre-commit/blob/faa6f8c70ccef865884adb0cb079c8162013bf19/pre_commit/parse_shebang.py#L31
+# [^2] https://github.com/astral-sh/rye/issues/1284
+
 - id: rye-test
   name: rye-test
   description: Run 'rye test' on your project.
