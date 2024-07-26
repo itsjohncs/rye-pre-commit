@@ -6,3 +6,11 @@
   types_or: [python, pyi]
   pass_filenames: false
   args: ["test"]
+- id: rye-lock
+  name: rye-lock
+  description: Run 'rye lock' when your project requirements change.
+  entry: rye-pre-commit
+  language: python
+  pass_filenames: false
+  files: ^(.*/)?(requirements(-dev)?\.lock|pyproject\.toml)$
+  args: ["lock"]
