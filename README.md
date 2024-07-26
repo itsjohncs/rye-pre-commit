@@ -8,7 +8,7 @@ To run `rye test` and `rye lock` via pre-commit, add the following to your `.pre
 
 ```yaml
 - repo: https://github.com/itsjohncs/rye-pre-commit
-  rev: v0.1.0
+  rev: v0.2.0
   hooks:
   - id: rye-test
   - id: rye-lock
@@ -18,7 +18,7 @@ To run an abitrary `rye` command, you can use the `rye` or `rye-with-filenames` 
 
 ```yaml
 - repo: https://github.com/itsjohncs/rye-pre-commit
-  rev: v0.1.0
+  rev: v0.2.0
   hooks:
   - id: rye
     args: ["sync"]
