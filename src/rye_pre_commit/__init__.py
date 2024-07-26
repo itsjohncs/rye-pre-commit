@@ -15,8 +15,8 @@ def find_rye(verbose: bool) -> Optional[str]:
         rprint("verbose: read path as", path)
 
     rye_name = "rye.exe" if platform.system() == "Windows" else "rye"
-    for dir in path:
-        rye_path = os.path.join(dir, rye_name)
+    for dir_path in path:
+        rye_path = os.path.join(dir_path, rye_name)
         if os.access(rye_path, os.X_OK):
             return rye_path
 
